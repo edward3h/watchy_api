@@ -1,7 +1,7 @@
 package watchy_api.services;
 
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 import org.junit.jupiter.api.Test;
 import static com.google.common.truth.Truth.assertThat;
 

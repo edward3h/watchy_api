@@ -5,7 +5,7 @@ import io.micronaut.core.type.Argument;
 import io.micronaut.http.MutableHttpRequest;
 import io.micronaut.http.client.bind.ClientRequestUriContext;
 import io.micronaut.http.client.bind.TypedClientArgumentRequestBinder;
-import javax.inject.Singleton;
+import jakarta.inject.Singleton;
 import watchy_api.models.TemperatureUnit;
 
 /**
@@ -23,7 +23,7 @@ public class TemperatureUnitArgumentBinder implements TypedClientArgumentRequest
     @Override
     public void bind(ArgumentConversionContext<TemperatureUnit> context, ClientRequestUriContext uriContext, TemperatureUnit value, MutableHttpRequest<?> request) {
         String useValue = value == TemperatureUnit.C ? "metric" : "imperial";
-        uriContext.getQueryParameters().put("units", useValue);
+        uriContext.addQueryParameter("units", useValue);
     }
 
 }

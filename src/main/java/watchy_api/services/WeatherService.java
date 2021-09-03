@@ -3,7 +3,7 @@ package watchy_api.services;
 import io.micronaut.cache.annotation.CacheConfig;
 import io.micronaut.cache.annotation.Cacheable;
 import io.micronaut.context.annotation.Property;
-import javax.inject.Singleton;
+import jakarta.inject.Singleton;
 import watchy_api.models.TemperatureUnit;
 import watchy_api.models.WeatherInfo;
 

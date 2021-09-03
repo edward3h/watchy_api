@@ -1,7 +1,8 @@
 plugins {
     id("com.github.johnrengelman.shadow") version "7.0.0"
-    id("io.micronaut.application") version "1.5.4"
-}
+    id("io.micronaut.application") version "2.0.3"
+    id("org.openrewrite.rewrite") version "5.7.0"
+ }
 
 version = "0.1"
 group = "watchy_api"
@@ -19,6 +20,10 @@ micronaut {
     }
 }
 
+rewrite {
+    activeRecipe("org.openrewrite.java.micronaut.Micronaut2to3Migration")
+}
+
 dependencies {
     implementation("io.micronaut:micronaut-http-client")
     implementation("io.micronaut:micronaut-runtime")
@@ -26,7 +31,7 @@ dependencies {
     implementation("io.micronaut:micronaut-validation")  
     implementation("io.micronaut.cache:micronaut-cache-caffeine")
     testImplementation "com.google.truth:truth:1.1.3"
-
+    rewrite("org.openrewrite.recipe:rewrite-micronaut:0.3.0")
 }
 
 

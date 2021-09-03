@@ -4,18 +4,17 @@ import io.micronaut.http.HttpRequest;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.PathVariable;
-import io.micronaut.http.server.netty.converters.HttpDataToStringConverter;
 import io.micronaut.http.server.util.HttpClientAddressResolver;
+import watchy_api.models.TemperatureUnit;
+import watchy_api.models.WatchyInfo;
+import watchy_api.services.IpLocationService;
+import watchy_api.services.WeatherService;
+
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZoneOffset;
-import java.time.temporal.ChronoField;
-import watchy_api.models.TemperatureUnit;
-import watchy_api.models.WatchyInfo;
-import watchy_api.services.IpLocationService;
-import watchy_api.services.WeatherService;
 
 /**
  *

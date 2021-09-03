@@ -6,7 +6,7 @@ import io.micronaut.http.exceptions.HttpStatusException;
 import io.micronaut.scheduling.TaskScheduler;
 import java.net.InetAddress;
 import java.time.Duration;
-import javax.inject.Singleton;
+import jakarta.inject.Singleton;
 import watchy_api.models.LocationInfo;
 
 /**
