@@ -20,6 +20,14 @@ micronaut {
     }
 }
 
+dockerBuild {
+    images = ["ghcr.io/edward3h/watchy-api:${project.version}", "ghcr.io/edward3h/watchy-api:latest"]
+}
+
+dockerBuildNative {
+    images = ["ghcr.io/edward3h/watchy-api-native:${project.version}", "ghcr.io/edward3h/watchy-api-native:latest"]
+}
+
 rewrite {
     activeRecipe("org.openrewrite.java.micronaut.Micronaut2to3Migration")
 }
