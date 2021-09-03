@@ -1,0 +1,9 @@
+micronaut:
+  application:
+    name: watchy_api
+
+  caches:
+    location-info:
+      expireAfterWrite: 1d
+    weather:
+      expireAfterWrite: 45m  
