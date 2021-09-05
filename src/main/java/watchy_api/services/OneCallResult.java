@@ -29,7 +29,7 @@ public class OneCallResult {
         this.daily = daily;
     }
 
-
+@Introspected
     public static class CurrentWeather {
         private float temp;
         private List<WeatherCondition> weather;
@@ -51,7 +51,7 @@ public class OneCallResult {
         }
 
     }
-
+@Introspected
     public static class DailyWeather {
         private DailyWeatherTemp temp;
 
@@ -64,7 +64,7 @@ public class OneCallResult {
         }
 
     }
-
+@Introspected
     public static class DailyWeatherTemp {
         private float min;
         private float max;
@@ -86,7 +86,7 @@ public class OneCallResult {
         }
 
     }
-
+@Introspected
     public static class WeatherCondition {
         
         private int id;
