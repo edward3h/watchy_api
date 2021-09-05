@@ -4,7 +4,7 @@ plugins {
     id("org.openrewrite.rewrite") version "5.7.0"
  }
 
-version = "0.2"
+version = "0.2.2"
 group = "watchy_api"
 
 repositories {
